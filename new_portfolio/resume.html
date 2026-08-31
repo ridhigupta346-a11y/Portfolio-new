@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ridhi Kumari - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --text-dark: #111827;
+      --text-body: #374151;
+      --text-muted: #4b5563;
+      --accent: #2563eb;
+      --border: #d1d5db;
+      --bg: #f3f4f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+
+    .resume-toolbar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.25rem;
+      background: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-action:hover {
+      background: #1d4ed8;
+    }
+
+    .btn-back {
+      background: #ffffff;
+      color: #374151;
+      border: 1px solid #d1d5db;
+    }
+
+    .btn-back:hover {
+      background: #f9fafb;
+      color: #111827;
+    }
+
+    .resume-sheet {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3.5rem 3.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Resume Header */
+    .header {
+      border-bottom: 2px solid #111827;
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 0.35rem;
+      column-gap: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-grid a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact-grid a:hover {
+      text-decoration: underline;
+    }
+
+    /* Resume Section */
+    .section {
+      margin-bottom: 1.35rem;
+    }
+
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-dark);
+      border-bottom: 1px solid #9ca3af;
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Skills */
+    .skills-row {
+      display: flex;
+      margin-bottom: 0.35rem;
+      font-size: 0.9rem;
+    }
+
+    .skills-label {
+      width: 140px;
+      font-weight: 700;
+      color: var(--text-dark);
+      flex-shrink: 0;
+    }
+
+    .skills-value {
+      color: var(--text-body);
+    }
+
+    /* Projects */
+    .project-entry {
+      margin-bottom: 1.15rem;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+    }
+
+    .project-title-tech {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .project-date {
+      font-size: 0.85rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      padding-left: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1rem;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #374151;
+      font-size: 1rem;
+    }
+
+    /* Education */
+    .edu-entry {
+      margin-bottom: 1rem;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.95rem;
+    }
+
+    .edu-school {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .edu-location {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    .edu-degree {
+      font-size: 0.9rem;
+      color: var(--text-body);
+    }
+
+    .edu-grades {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* Certificates & Training */
+    .cert-item {
+      font-size: 0.875rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cert-name {
+      color: var(--text-body);
+    }
+
+    .cert-date {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      font-size: 0.825rem;
+    }
+
+    @media (max-width: 640px) {
+      .resume-sheet {
+        padding: 1.75rem 1.25rem;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .project-header, .edu-header {
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .resume-toolbar {
+        display: none !important;
+      }
+      .resume-sheet {
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Action Toolbar -->
+  <div class="resume-toolbar">
+    <a href="index.html" class="btn-action btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    <button class="btn-action" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+  </div>
+
+  <!-- Main CV Page -->
+  <main class="resume-sheet">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="name">Ridhi Kumari</h1>
+      <div class="contact-grid">
+        <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ridhi-kumari-695b31380/" target="_blank">https://www.linkedin.com/in/ridhi-kumari-695b31380/</a></div>
+        <div><strong>Email:</strong> <a href="mailto:ridhigupta346@gmail.com">ridhigupta346@gmail.com</a></div>
+        <div><strong>Github:</strong> <a href="https://github.com/ridhigupta346-a11y/portfolio" target="_blank">https://github.com/ridhigupta346-a11y/portfolio</a></div>
+        <div><strong>Mobile:</strong> +91 9142097522</div>
+      </div>
+    </header>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2 class="section-title">SKILLS</h2>
+      <div class="skills-row">
+        <div class="skills-label">Languages:</div>
+        <div class="skills-value">C++, Python, C, Java Script</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-label">Tools/Platforms:</div>
+        <div class="skills-value">Visual studio Code , Anti Gravity , MS SQL Server</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-label">Soft Skills:</div>
+        <div class="skills-value">Problem-Solving, Team Player, Adaptability</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2 class="section-title">PROJECTS</h2>
+
+      <!-- Library Management Program -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">Library Management Program | Python, File Handling, Data Structure</span>
+          <span class="project-date">Nov`25</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a Python-based library management program to efficiently add, store, and display book records, reducing manual record management and organizing library data systematically.</li>
+          <li>Implemented functions, loops, conditional statements, lists, and dictionaries to manage book information such as book ID, title, author, and availability status, enabling quick and structured access to library records.</li>
+          <li>Designed a menu-driven interface that allows users to add new books, view existing records, and perform basic library operations, providing a simple and user-friendly experience.</li>
+        </ul>
+      </div>
+
+      <!-- Restaurant Homepage Website -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">Restaurant Homepage Website | HTML, CSS, Responsive Web Design</span>
+          <span class="project-date">Jan`26</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a visually appealing restaurant homepage website using HTML and CSS, organizing content into structured sections including Home, Menu, About, and Contact for easy navigation.</li>
+          <li>Implemented CSS styling, layouts, typography, spacing, and navigation elements to create a clean and attractive user interface that improves the overall browsing experience.</li>
+          <li>Designed a responsive and user-friendly webpage layout, demonstrating practical knowledge of HTML structure, CSS styling, and fundamental front-end web development concepts.</li>
+        </ul>
+      </div>
+
+      <!-- Simple Calculator -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">Simple Calculator | C, Functions, Conditional Statements</span>
+          <span class="project-date">Oct`25</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a console-based calculator application in C to perform fundamental arithmetic operations including addition, subtraction, multiplication, and division.</li>
+          <li>Implemented functions, switch-case statements, operators, and user input handling to process calculations based on the user's selected operation.</li>
+          <li>Designed a simple menu-driven interface for interactive calculations, demonstrating practical understanding of core C programming concepts and control structures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="section">
+      <h2 class="section-title">TRAINING</h2>
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">WNS Cyber Smart Training Program | Cybersecurity Awareness & Digital Safety</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Completed training focused on cybersecurity awareness, cyber threats, phishing prevention, password security, and safe digital practices.</li>
+          <li>Developed an understanding of basic cyber hygiene and responsible online behavior to minimize security risks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section">
+      <h2 class="section-title">CERTIFICATES</h2>
+      <div class="cert-item">
+        <span class="cert-name">• Infosys Springboard – C++ Programming</span>
+        <span class="cert-date">Feb`26</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">• Infosys Springboard – Big Data Fundamentals</span>
+        <span class="cert-date">Nov`25</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">• Cyber Smart Certificate – WNS(Global Services)</span>
+        <span class="cert-date">Jul`26</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">• Python Programming Certificate – AI from Techies</span>
+        <span class="cert-date">Jul`25</span>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <h2 class="section-title">EDUCATION</h2>
+      
+      <div class="edu-entry">
+        <div class="edu-header">
+          <span class="edu-school">Lovely Professional University</span>
+          <span class="edu-location">Phagwara,Punjab</span>
+        </div>
+        <div class="edu-degree">Bachelor of Technology</div>
+        <div class="edu-grades">Computer Science and Engineering; CGPA: 7.7</div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-header">
+          <span class="edu-school">The Chandrasheel School</span>
+          <span class="edu-location">Bara Chakia (Bihar)</span>
+        </div>
+        <div class="edu-degree">Intermediate</div>
+        <div class="edu-grades">PCM; Percentage: 81%</div>
+        <div class="edu-grades">Percentage 85%</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
