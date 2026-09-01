@@ -198,6 +198,7 @@ ul {
 .gradient-text {
   background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -1538,7 +1539,8 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin-bottom: 1.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .tag {
@@ -1549,12 +1551,6 @@ ul {
   padding: 0.2rem 0.55rem;
   border-radius: 4px;
   border: 1px solid var(--border-glass);
-}
-
-.project-actions {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: auto;
 }
 
 /* ==========================================================================
