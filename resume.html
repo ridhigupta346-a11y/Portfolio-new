@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ridhi Kumari - Resume | Software Engineer & CSE Undergraduate</title>
+  <meta name="description" content="Resume of Ridhi Kumari - Computer Science & Engineering Undergraduate at Lovely Professional University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    :root {
+      --text-dark: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --border: #e2e8f0;
+      --border-dark: #0f172a;
+      --bg: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.5;
+      padding: 2rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .resume-toolbar {
+      max-width: 850px;
+      margin: 0 auto 1.5rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      background: var(--accent);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(37, 99, 235, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-action:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-back {
+      background: #ffffff;
+      color: var(--text-dark);
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-back:hover {
+      background: #f1f5f9;
+      color: #000;
+    }
+
+    .resume-sheet {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 3.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+    }
+
+    /* Resume Header */
+    .header {
+      border-bottom: 2px solid var(--border-dark);
+      padding-bottom: 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-profile-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .resume-photo-box {
+      width: 76px;
+      height: 76px;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border: 2px solid var(--accent);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    }
+
+    .resume-photo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 12%;
+      display: block;
+    }
+
+    .header-left {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .name {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      letter-spacing: -0.5px;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      text-align: right;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 0.45rem;
+    }
+
+    .contact-item i {
+      color: var(--accent);
+      font-size: 0.85rem;
+      width: 14px;
+      text-align: center;
+    }
+
+    .contact-grid a {
+      color: var(--text-body);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-grid a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Resume Section */
+    .section {
+      margin-bottom: 1.35rem;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-dark);
+      border-bottom: 1.5px solid var(--border-dark);
+      padding-bottom: 0.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* Skills */
+    .skills-row {
+      display: flex;
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .skills-label {
+      width: 145px;
+      font-weight: 700;
+      color: var(--text-dark);
+      flex-shrink: 0;
+    }
+
+    .skills-value {
+      color: var(--text-body);
+    }
+
+    /* Projects */
+    .project-entry {
+      margin-bottom: 1.15rem;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+      gap: 1rem;
+    }
+
+    .project-title-tech {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .project-date {
+      font-size: 0.825rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .bullet-list {
+      list-style-type: none;
+      padding-left: 0.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.875rem;
+      line-height: 1.55;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.1rem;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--text-dark);
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Education */
+    .edu-entry {
+      margin-bottom: 0.85rem;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.925rem;
+      gap: 1rem;
+    }
+
+    .edu-school {
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .edu-location {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      white-space: nowrap;
+    }
+
+    .edu-degree {
+      font-size: 0.875rem;
+      color: var(--text-body);
+      font-weight: 500;
+    }
+
+    .edu-grades {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .edu-grades strong {
+      color: var(--accent-dark);
+    }
+
+    /* Certificates & Training */
+    .cert-item {
+      font-size: 0.875rem;
+      margin-bottom: 0.35rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .cert-name {
+      color: var(--text-body);
+      font-weight: 500;
+    }
+
+    .cert-date {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--text-muted);
+      font-size: 0.825rem;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      .resume-sheet {
+        padding: 1.75rem 1.25rem;
+      }
+      .header {
+        flex-direction: column;
+      }
+      .contact-grid {
+        text-align: left;
+      }
+      .contact-item {
+        justify-content: flex-start;
+      }
+      .project-header, .edu-header, .cert-item {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+      .skills-row {
+        flex-direction: column;
+      }
+      .skills-label {
+        width: 100%;
+        margin-bottom: 0.15rem;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .resume-toolbar {
+        display: none !important;
+      }
+      .resume-sheet {
+        padding: 0;
+        box-shadow: none;
+        border: none;
+        max-width: 100%;
+      }
+      .section {
+        margin-bottom: 1.15rem;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Action Toolbar -->
+  <div class="resume-toolbar">
+    <a href="index.html" class="btn-action btn-back"><i class="fa-solid fa-arrow-left"></i> Back to Portfolio</a>
+    <button class="btn-action" onclick="window.print()"><i class="fa-solid fa-print"></i> Print / Save as PDF</button>
+  </div>
+
+  <!-- Main CV Page -->
+  <main class="resume-sheet">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-profile-wrap">
+        <div class="resume-photo-box">
+          <img src="ridhi-profile.png" alt="Ridhi Kumari" class="resume-photo-img" />
+        </div>
+        <div class="header-left">
+          <h1 class="name">Ridhi Kumari</h1>
+          <p class="tagline">B.Tech Computer Science & Engineering Undergraduate</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/ridhi-kumari-695b31380/" target="_blank" rel="noopener noreferrer">ridhi-kumari-695b31380</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <strong>Email:</strong>
+          <a href="mailto:ridhigupta346@gmail.com">ridhigupta346@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/ridhigupta346-a11y/portfolio" target="_blank" rel="noopener noreferrer">ridhigupta346-a11y/portfolio</a>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <strong>Mobile:</strong>
+          <span>+91 9142097522</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- SKILLS -->
+    <section class="section">
+      <h2 class="section-title">SKILLS</h2>
+      <div class="skills-row">
+        <div class="skills-label">Languages:</div>
+        <div class="skills-value">C++, Python, JavaScript (ES6+), C, SQL</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-label">Tools/Platforms:</div>
+        <div class="skills-value">VS Code, Google Antigravity, MS SQL Server, Git/GitHub</div>
+      </div>
+      <div class="skills-row">
+        <div class="skills-label">Soft Skills:</div>
+        <div class="skills-value">Analytical Problem-Solving, Team Collaboration, High Adaptability</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section">
+      <h2 class="section-title">PROJECTS</h2>
+
+      <!-- Library Management Program -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">Library Management Program | Python, File Handling, Data Structure</span>
+          <span class="project-date">Nov 2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a Python-based library management program to efficiently add, store, and display book records, reducing manual record management and organizing library data systematically.</li>
+          <li>Implemented functions, loops, conditional statements, lists, and dictionaries to manage book information such as book ID, title, author, and availability status, enabling quick and structured access to library records.</li>
+          <li>Designed a menu-driven interface that allows users to add new books, view existing records, and perform basic library operations, providing a simple and user-friendly experience.</li>
+        </ul>
+      </div>
+
+      <!-- Restaurant Homepage Website -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">Restaurant Homepage Website | HTML, CSS, Responsive Web Design</span>
+          <span class="project-date">Jan 2026</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a visually appealing restaurant homepage website using HTML and CSS, organizing content into structured sections including Home, Menu, About, and Contact for easy navigation.</li>
+          <li>Implemented CSS styling, layouts, typography, spacing, and navigation elements to create a clean and attractive user interface that improves the overall browsing experience.</li>
+          <li>Designed a responsive and user-friendly webpage layout, demonstrating practical knowledge of HTML structure, CSS styling, and fundamental front-end web development concepts.</li>
+        </ul>
+      </div>
+
+      <!-- Simple Calculator -->
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">Simple Calculator | C, Functions, Conditional Statements</span>
+          <span class="project-date">Oct 2025</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a console-based calculator application in C to perform fundamental arithmetic operations including addition, subtraction, multiplication, and division.</li>
+          <li>Implemented functions, switch-case statements, operators, and user input handling to process calculations based on the user's selected operation.</li>
+          <li>Designed a simple menu-driven interface for interactive calculations, demonstrating practical understanding of core C programming concepts and control structures.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="section">
+      <h2 class="section-title">TRAINING</h2>
+      <div class="project-entry">
+        <div class="project-header">
+          <span class="project-title-tech">WNS Cyber Smart Training Program | Cybersecurity Awareness & Digital Safety</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Completed training focused on cybersecurity awareness, cyber threats, phishing prevention, password security, and safe digital practices.</li>
+          <li>Developed an understanding of basic cyber hygiene and responsible online behavior to minimize security risks.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section class="section">
+      <h2 class="section-title">CERTIFICATES</h2>
+      <div class="cert-item">
+        <span class="cert-name">• Infosys Springboard – C++ Programming</span>
+        <span class="cert-date">Feb 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">• Infosys Springboard – Big Data Fundamentals</span>
+        <span class="cert-date">Nov 2025</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">• Cyber Smart Certificate – WNS Global Services</span>
+        <span class="cert-date">Jul 2026</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">• Python Programming Certificate – AI from Techies</span>
+        <span class="cert-date">Jul 2025</span>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section">
+      <h2 class="section-title">EDUCATION</h2>
+      
+      <div class="edu-entry">
+        <div class="edu-header">
+          <span class="edu-school">Lovely Professional University</span>
+          <span class="edu-location">Phagwara, Punjab</span>
+        </div>
+        <div class="edu-degree">Bachelor of Technology in Computer Science and Engineering</div>
+        <div class="edu-grades">CGPA: <strong>7.7 / 10.0</strong></div>
+      </div>
+
+      <div class="edu-entry">
+        <div class="edu-header">
+          <span class="edu-school">The Chandrasheel School</span>
+          <span class="edu-location">Bara Chakia (Bihar)</span>
+        </div>
+        <div class="edu-degree">Intermediate (12th PCM)</div>
+        <div class="edu-grades">PCM: 81% | Aggregate: <strong>85%</strong></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
